@@ -1,8 +1,11 @@
 import React from 'react'
+import Home from './screens/Home'
 
 function App() {
   return (
-    <div className="w-full h-screen flex justify-center items-center">App</div>
+    <div>
+      <Home />
+    </div>
   )
 }
 

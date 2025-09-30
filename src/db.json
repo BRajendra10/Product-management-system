@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "image": "https://imgs.search.brave.com/aJkNCIzccoVGOiD9BHPgF7QB4NJpm1tQ6HSpLRlXGS8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9zZW8vTGVu/b3ZvLUlkZWFQYWQt/MWktMTQtTGFwdG9w/LUludGVsLUNlbGVy/b24tTjQ1MDAtNEdC/LTEyOEdCLWVNTUMt/ODJMVjAwNzVVUy0x/Mi1tby1NaWNyb3Nv/ZnQtMzY1LWluY2x1/ZGVkXzU5MWViOTI2/LTY3ZTYtNDhjZC05/Y2E3LWRkOWYyMmU2/MWQyZi43NTI4MDZm/MTVjODU0ZDU5MTI3/MWE4NzkwMDUwZmRj/YS5qcGVnP29kbkhl/aWdodD01NzYmb2Ru/V2lkdGg9NTc2Jm9k/bkJnPUZGRkZGRg",
+      "title": "Laptop",
+      "category": "Electronics",
+      "price": 50000
+    },
+    {
+      "id": 2,
+      "image": "https://imgs.search.brave.com/7Ci8bWByJgTA5jyCFSSHrPGRsr88qjyVmjtu6Mpzxjw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9oaWRk/ZW5mb3JldmVyLmNv/bS9jZG4vc2hvcC9w/cm9kdWN0cy9jdXN0/b20tcGhvdG8tcHJv/amVjdGlvbi1qZXdl/bHJ5LW5lY2tsYWNl/LWJyYWNlbGV0LWtl/eWNoYWluLTUyMDE0/NS5qcGc_dj0xNjc4/MzY4MDY0JndpZHRo/PTE5NDY",
+      "title": "Necklace",
+      "category": "Jwelery",
+      "price": 50000
+    },
+    {
+      "id": "99a7",
+      "title": "lenovo",
+      "image": "https://imgs.search.brave.com/p6gkml0VBs1wVb0dT6ffPd5c79leiN4A_7XrDfCu0cE/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly9wNC1v/ZnAuc3RhdGljLnB1/Yi9TaGFyZVJlc291/cmNlL25hL2RscC9o/ZXJvcy9tZWRpdW0v/bGVub3ZvLW91dGxl/dC1nZW5lcmljLWxh/cHRvcHMtZGVza3Rv/cC5qcGc",
+      "category": "Electronics",
+      "price": "50000"
+    }
+  ]
+}
