@@ -11,6 +11,10 @@ This is a simple Product Management App built with React and Redux Toolkit, feat
 - **Real-Time Updates:** All product data is synced with the server, ensuring the UI always reflects the latest data.
 - **No Local State:** All product-related state is managed via Redux Toolkit, not local React state.
 
+### Links
+
+[Project Visuals (Google Drive)](https://drive.google.com/drive/folders/1B-KPL5QEh7stUIOWGk59mxjSunxRDIBf?usp=sharing)
+
 ### Getting Started
 
 1. **Install dependencies:**
