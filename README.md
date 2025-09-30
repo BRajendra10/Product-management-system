@@ -1,16 +1,47 @@
-# React + Vite
+## Product Management App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple Product Management App built with React and Redux Toolkit, featuring a backend powered by JSON Server. The app allows you to view and add products, with all data updates reflected in real time on the server. State management is handled globally using Redux Toolkit, not local component state.
 
-Currently, two official plugins are available:
+### Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Backend Setup:** Uses [JSON Server](https://github.com/typicode/json-server) to provide a mock REST API for products.
+- **Redux Toolkit:** State management is implemented using Redux Toolkit for predictable and scalable state updates.
+- **Fetch & Post:** Products are fetched from and posted to the JSON Server using Redux async thunks.
+- **Add Product:** Users can add new products through a form. On submission, the product is posted to the server and the UI updates in real time.
+- **Real-Time Updates:** All product data is synced with the server, ensuring the UI always reflects the latest data.
+- **No Local State:** All product-related state is managed via Redux Toolkit, not local React state.
 
-## React Compiler
+### Getting Started
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Install dependencies:**
+	```bash
+	npm install
+	```
 
-## Expanding the ESLint configuration
+2. **Start JSON Server:**
+	```bash
+	npx json-server --watch src/db.json --port 3001
+	```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. **Start the React App:**
+	```bash
+	npm run dev
+	```
+
+### Project Structure
+
+- `src/features/ProductsSlice.js`: Redux slice for product state and async actions (fetch, add).
+- `src/screens/AddProduct.jsx`: Form to add new products.
+- `src/screens/Products.jsx`: Displays the list of products.
+- `src/db.json`: JSON Server database file.
+- `src/store/store.js`: Redux store setup.
+
+### Notes
+
+- All product data is managed globally via Redux Toolkit.
+- Adding a product updates the server and Redux state in real time.
+- No product state is stored locally in React components.
+
+---
+Feel free to customize and extend this app for your own product management needs!
+
