@@ -11,49 +11,67 @@ function Products() {
   const { products } = useSelector((state) => state.products);
 
   const [query, setQuery] = useState("");
-  const [result, setResult] = useState([]);
-
-  console.log(products);
-
-  useEffect(() => { // Search featuers
-    const array = []
-    const data = products.find((product) =>
-      product.title.toLowerCase().includes(query.toLowerCase())
-    );
-
-    array.push(data)
-
-    setResult(array);
-  }, [query, products])
+  const [filter, setFilter] = useState("All");
 
   useEffect(() => {
     dispatch(getProducts());
-  }, [dispatch])
+  }, [dispatch]);
+
+  // Get unique categories for filter dropdown
+  const categories = ["All", ...Array.from(new Set(products.map(p => p.category)))];
+
+  // Filter and search logic
+  const filteredProducts = products.filter(product => {
+    const matchesQuery = product.title.toLowerCase().includes(query.toLowerCase());
+    const matchesCategory = filter === "All" || product.category === filter;
+    return matchesQuery && matchesCategory;
+  });
 
   return (
-    <div className="w-full h-full">
-      {/* Where all products will be shown */}
-      <div className="w-full h-[5rem] ">
+    <div className="relative w-full h-full bg-gradient-to-br from-red-100 to-red-300 overflow-y-scroll">
+      <div className="sticky top-0 bg-white w-full h-[4.4rem] flex justify-between items-center p-4">
+        <div className="w-[25rem] flex bg-red-100 rounded-lg overflow-hidden">
+          <button
+            className="p-2 flex justify-center items-center"
+            onClick={() => setQuery("")}
+            aria-label="Clear search"
+          >
+            {query ? "X" : <FiSearch />}
+          </button>
+          <input
+            type="search"
+            name="search"
+            id="search"
+            className="flex-1 px-2 py-3 outline-none bg-transparent"
+            placeholder="Search products..."
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+        </div>
 
-        <div className="bg-green-200 w-full h-[5rem] flex justify-between items-center p-4">
+        <select
+          name="filter"
+          id="filter"
+          className="p-2 bg-red-200 rounded-lg"
+          value={filter}
+          onChange={e => setFilter(e.target.value)}
+        >
+          {categories.map(cat => (
+            <option key={cat} value={cat}>{cat}</option>
+          ))}
+        </select>
+      </div>
 
-          <div className="w-[25rem] grid grid-cols-10 bg-red-100 rounded-lg">
-            <button className="p-2 flex justify-center items-center" onClick={() => setQuery("")}>
-              {query ? "X" :<FiSearch />}
-            </button>
-            <input type="search" name="search" id="search" className="col-span-9 px-2 py-3" onChange={(e) => setQuery(e.target.value)} />
+      <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 p-2 overflow-y-scroll">
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map(product => (
+            <Product key={product.id} data={product} />
+          ))
+        ) : (
+          <div className="col-span-full text-center text-gray-500 py-10">
+            No products found.
           </div>
-
-          <select name="filter" id="filter" className="p-2 bg-red-200">
-            <option value="Electronics">Electronics</option>
-            <option value="Jwelery">Jwelery</option>
-          </select>
-
-        </div>
-
-        <div className="w-full h-full grid grid-cols-2 gap-3 p-3">
-          {products.map((product) => <Product data={product} />)}
-        </div>
+        )}
       </div>
     </div>
   )

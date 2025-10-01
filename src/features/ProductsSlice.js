@@ -13,6 +13,12 @@ export const addProduct = createAsyncThunk("add/product", async (newProduct) => 
     return res.data;
 })
 
+export const deleteProduct = createAsyncThunk("delete/product", async (id) => {
+    console.log(id);
+    await axios.delete(`${URL}/${id}`);
+    return id;
+})
+
 const initialState = {
     products: [],
     status: "Pending...",
@@ -36,6 +42,8 @@ const productsSlice = createSlice({
                 state.status = "Data can't be fetch";
                 state.error = action.payload;
             })
+
+        builder
             .addCase(addProduct.pending, (state) => {
                 state.status = "Pending...";
             })
@@ -43,6 +51,18 @@ const productsSlice = createSlice({
                 state.products.push(action.payload);
             })
             .addCase(addProduct.rejected, (state) => {
+                state.status = "Pending...";
+            })
+
+        builder
+            .addCase(deleteProduct.pending, (state) => {
+                state.status = "Pending...";
+            })
+            .addCase(deleteProduct.fulfilled, (state, action) => {
+                console.log(action.payload);
+                state.products = state.products.filter((el) => el.id !== action.payload);
+            })
+            .addCase(deleteProduct.rejected, (state) => {
                 state.status = "Pending...";
             })
     }

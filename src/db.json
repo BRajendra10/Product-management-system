@@ -2,24 +2,59 @@
   "products": [
     {
       "id": 1,
-      "image": "https://imgs.search.brave.com/aJkNCIzccoVGOiD9BHPgF7QB4NJpm1tQ6HSpLRlXGS8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9zZW8vTGVu/b3ZvLUlkZWFQYWQt/MWktMTQtTGFwdG9w/LUludGVsLUNlbGVy/b24tTjQ1MDAtNEdC/LTEyOEdCLWVNTUMt/ODJMVjAwNzVVUy0x/Mi1tby1NaWNyb3Nv/ZnQtMzY1LWluY2x1/ZGVkXzU5MWViOTI2/LTY3ZTYtNDhjZC05/Y2E3LWRkOWYyMmU2/MWQyZi43NTI4MDZm/MTVjODU0ZDU5MTI3/MWE4NzkwMDUwZmRj/YS5qcGVnP29kbkhl/aWdodD01NzYmb2Ru/V2lkdGg9NTc2Jm9k/bkJnPUZGRkZGRg",
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
       "title": "Laptop",
       "category": "Electronics",
       "price": 50000
     },
     {
-      "id": 2,
-      "image": "https://imgs.search.brave.com/7Ci8bWByJgTA5jyCFSSHrPGRsr88qjyVmjtu6Mpzxjw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9oaWRk/ZW5mb3JldmVyLmNv/bS9jZG4vc2hvcC9w/cm9kdWN0cy9jdXN0/b20tcGhvdG8tcHJv/amVjdGlvbi1qZXdl/bHJ5LW5lY2tsYWNl/LWJyYWNlbGV0LWtl/eWNoYWluLTUyMDE0/NS5qcGc_dj0xNjc4/MzY4MDY0JndpZHRo/PTE5NDY",
-      "title": "Necklace",
-      "category": "Jwelery",
-      "price": 50000
+      "id": 3,
+      "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+      "title": "Smartphone",
+      "category": "Electronics",
+      "price": 30000
     },
     {
-      "id": "99a7",
-      "title": "lenovo",
-      "image": "https://imgs.search.brave.com/p6gkml0VBs1wVb0dT6ffPd5c79leiN4A_7XrDfCu0cE/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly9wNC1v/ZnAuc3RhdGljLnB1/Yi9TaGFyZVJlc291/cmNlL25hL2RscC9o/ZXJvcy9tZWRpdW0v/bGVub3ZvLW91dGxl/dC1nZW5lcmljLWxh/cHRvcHMtZGVza3Rv/cC5qcGc",
+      "id": 4,
+      "image": "https://imgs.search.brave.com/vcZpuVIj3_a8K2pnQRVNyf-0_NhAOqk94CWDpS_GeD8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE1/MDU3NDA0MjA5Mjgt/NWU1NjBjMDZkMzBl/P2ZtPWpwZyZxPTYw/Jnc9MzAwMCZpeGxp/Yj1yYi00LjEuMCZp/eGlkPU0zd3hNakEz/ZkRCOE1IeHpaV0Z5/WTJoOE1ueDhhR1Zo/WkhCb2IyNWxjM3hs/Ym53d2ZId3dmSHg4/TUE9PQ",
+      "title": "Headphones",
       "category": "Electronics",
-      "price": "50000"
+      "price": 4000
+    },
+    {
+      "id": 5,
+      "image": "https://imgs.search.brave.com/Hx98geGylkl6wp1FYx8ThEiqVKChI3r0HkyKIIqDGiA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly96b3Vr/LmNvLmluL2Nkbi9z/aG9wL2ZpbGVzLzF4/MS5wc2JfMDAyMV8z/eDRfMDAwMHNfMDAw/MV9MYXllcl81My5q/cGc_dj0xNzQzNTA4/NjE0JndpZHRoPTE1/MDA",
+      "title": "Backpack",
+      "category": "Accessories",
+      "price": 2000
+    },
+    {
+      "id": 6,
+      "image": "https://imgs.search.brave.com/zLTKsEws_hXcC66vFlYj-_p52HE2KYq33uFMDAT2fQY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMucGV4ZWxzLmNv/bS9waG90b3MvMTI1/Nzc5L3BleGVscy1w/aG90by0xMjU3Nzku/anBlZz9hdXRvPWNv/bXByZXNzJmNzPXRp/bnlzcmdiJmRwcj0x/Jnc9NTAw",
+      "title": "Wrist Watch",
+      "category": "Jewelry",
+      "price": 8000
+    },
+    {
+      "id": 7,
+      "image": "https://imgs.search.brave.com/X3VEGPhJgsnI_sdljVnPizop0rMdxMDkbq8CsIOdfV4/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/dGhld2lyZWN1dHRl/ci5jb20vd3AtY29u/dGVudC9tZWRpYS8y/MDI0LzExL3J1bm5p/bmdzaG9lcy0yMDQ4/cHgtMDk1MjIuanBn/P2F1dG89d2VicCZx/dWFsaXR5PTc1Jndp/ZHRoPTEwMjQ",
+      "title": "Running Shoes",
+      "category": "Footwear",
+      "price": 3500
+    },
+    {
+      "id": 8,
+      "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f",
+      "title": "T-Shirt",
+      "category": "Clothing",
+      "price": 700
+    },
+    {
+      "id": 9,
+      "image": "https://imgs.search.brave.com/iGZAEDuG7hBINmxsShZg3DmW-bBT0HpB1OmpZL5yIyM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS53aXJlZC5jb20v/cGhvdG9zLzY4NDBj/NzQ4YWE0OThlMGI5/YTQ2M2E4OS80OjMv/d182NDAsY19saW1p/dC9PbmVQbHVzJTIw/UGFkJTIwMyUyMFNP/VVJDRSUyMEp1bGlh/biUyMENob2trYXR0/dSUyMDQucG5n",
+      "title": "Tablet",
+      "category": "Electronics",
+      "price": 25000
     }
   ]
 }

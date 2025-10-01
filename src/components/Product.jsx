@@ -1,23 +1,49 @@
 import React from 'react'
 
-function Product({data}) {
+import { useSelector, useDispatch } from 'react-redux'
+
+import { deleteProduct } from '../features/ProductsSlice';
+
+
+function Product({ data }) {
+    const dispatch = useDispatch();
 
     return (
-    <div className="w-[40rem] h-[20rem] grid grid-cols-2 bg-gray-200 rounded-xl" key={data?.id}>
-        <img src={data?.image} alt="" className="col-span-1 h-full object-cover rounded-l-xl" />
-
-        <div className=" rounded-r-xl flex flex-col gap-2 p-2">
-            <h3 className="text-xl font-bold">{data?.title}</h3>
-            <span>category: {data?.category}</span>
-            <b>Price: {data?.price}</b>
-
-            <div className="w-full flex gap-2">
-                <button className="px-2 py-1 border rounded-lg">Edit Product</button>
-                <button className="px-2 py-1 border rounded-lg">Delete Product</button>
+        <div
+            className="flex bg-white shadow-lg rounded-xl overflow-hidden transition-transform h-[18rem]"
+            key={data?.id}
+        >
+            <div className="w-3/5 h-full">
+                <img
+                    src={data?.image}
+                    alt={data?.title}
+                    className="h-full w-full object-cover"
+                />
+            </div>
+            <div className="w-2/5 flex flex-col justify-between p-6 bg-gradient-to-br from-gray-50 to-gray-200">
+                <div>
+                    <h3 className="text-xl font-bold text-gray-800 mb-2 truncate">{data?.title}</h3>
+                    <span className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs mb-4">
+                        {data?.category}
+                    </span>
+                    <div className="text-lg font-semibold text-green-700 mb-4">
+                        ₹{data?.price.toLocaleString()}
+                    </div>
+                </div>
+                <div className="flex gap-2">
+                    <button className="flex-1 px-3 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition text-sm">
+                        Edit
+                    </button>
+                    <button
+                        className="flex-1 px-3 py-2 bg-red-500 text-white rounded-lg shadow hover:bg-red-600 transition text-sm"
+                        onClick={() => dispatch(deleteProduct(data.id))}
+                    >
+                        Delete
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default Product
